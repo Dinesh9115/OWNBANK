@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>OWN BANK'S LOAN CALCULATION</title>
+
+<h1>CAR/HOME/PERSONAL LOAN EMI CALCULATOR</h1>
+
+	<style>
+		body {
+			 background-image: url('loan.png');
+ 			 background-repeat: no-repeat;
+ 			 background-attachment: fixed;
+  			background-size: 100% 100%;
+					}
+		
+		h1 {
+			font-size: 35px;
+			text-color:red;
+			text-align:center;
+		}
+		
+		h1 {
+			font-size: 21px;
+			margin-top: 20px;
+		}
+		
+		.calculator {
+			width: 400px;
+			height: 450px;
+			background-color:blue;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			padding: 20px 0px 0px 100px;
+			border-radius: 50px;
+			color: white;
+		}
+		
+		input {
+			padding: 7px;
+			width: 70%;
+			margin-top: 7px;
+		}
+		p{
+			text-color:yellow;
+			}
+	</style>
+</head>
+
+<body>
+	<div class="calculator">
+		
+			<p>Applicant Name 	:
+			<input id="name" type="text"
+			onchange="Calculate()">
+		
+		<p>Amount (₹) 	:
+			<input id="amount" type="number"
+			onchange="Calculate()">
+		</p>
+
+		<p>Loan Type 	:
+			
+<select id="loantype" type="dropdown" 
+onchange="calculate()">
+<option value="homeloan">Home loan</options>
+<option value="carloan">Car loan</options>
+<option value="personalloan">Personal loan</options>
+</select><br>
+
+						
+		</p>
+
+		<p>Interest Rate :
+			<input id="rate" type="number"
+			onchange="Calculate()">
+		</p>
+
+		<p>Months to Pay :
+			<input id="months" type="number"
+			onchange="Calculate()">
+		</p>
+			
+		<h2 input id="total" type="number"
+			onchange="calculate()"></h2>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+
+</html>
